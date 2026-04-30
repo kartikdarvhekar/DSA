@@ -11,13 +11,9 @@ public:
         if(root->left==NULL && root->right==NULL) return true;
         vector<int>in;
         inorder(root,in);
-        vector<int>ans=in;
-        sort(ans.begin(),ans.end());
-        for(int i=0;i<in.size();i++){
-            if(ans[i]!=in[i]) return false;
-            if(i<in.size()-1){
-                if(ans[i]==ans[i+1]) return false;
-            }
+        
+        for(int i=1;i<in.size();i++){
+            if(in[i-1]>=in[i]) return false;
         }
         return true;
         
