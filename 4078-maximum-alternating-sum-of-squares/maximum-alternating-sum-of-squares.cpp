@@ -3,8 +3,8 @@ public:
     long long maxAlternatingSum(vector<int>& nums) {
         long long ans=0;
         for(int i=0;i<nums.size();i++){
-            int k=(nums[i]*nums[i]);
-            nums[i]=k;
+            nums[i]=(nums[i]*nums[i]);
+           
         }
         sort(nums.begin(),nums.end());
         int n=nums.size();
